@@ -1,0 +1,24 @@
+<h3>{{title}}</h3>
+Authors:
+{{#each data.author}}
+  {{this}}
+  {{#unless @last}}, {{/unless}}
+{{/each}}<br />
+
+Description:
+{{data.description}}<br />
+Genre:
+{{#each data.genre}}
+  {{this}}
+  {{#unless @last}}, {{/unless}}
+{{/each}}<br />
+ISBN12:
+{{data.isbn13}}<br />
+ISBN10:
+{{data.isbn10}}<br />
+Year:
+{{data.releaseYear}}<br />
+Average Rating:
+{{data.avgRating}}<br />
+<a href="">Add to "read" list.</a>
+<a href="">Add to "Want to read" list</a>

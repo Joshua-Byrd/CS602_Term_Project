@@ -1,0 +1,18 @@
+<h3>Book List</h3>
+<table class="table">
+  <th>Title</th><th>Author(s)</th><th></th><th></th>
+  {{#each results}}
+    <tr>
+      <!--Title will take you to the book page-->
+      <td><a href="/book-admin/{{this.id}}">{{this.title}}</a></td>
+      <td>
+        {{#each this.author}}
+          {{this}}
+          {{#unless @last}}, {{/unless}}
+        {{/each}}
+      </td>
+      <td><a href="">Add to read list</a></td>
+      <td><a href="">Add to to-be-read list</a></td>
+    </tr>
+  {{/each}}
+</table>

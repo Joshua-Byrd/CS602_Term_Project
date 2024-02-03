@@ -1,0 +1,19 @@
+<h3>Book List</h3>
+<table class="table">
+  <th>Title</th><th>Author(s)</th><th></th><th></th>
+  {{#each results}}
+    <tr>
+      <td><a href="/book-admin/{{this.id}}">{{this.title}}</a></td>
+      <td>
+        {{#each this.author}}
+          {{this}}
+          {{#unless @last}}, {{/unless}}
+        {{/each}}
+      </td>
+      <td><a href="">edit</a></td>
+      <td><a href="">delete</a></td>
+    </tr>
+  {{/each}}
+</table>
+
+<a href="#">Add New Book</a>
