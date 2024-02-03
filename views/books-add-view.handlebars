@@ -1,0 +1,32 @@
+<h3>Add new Book</h3>
+<form method="post" action="/books/add" class="form">
+
+  <label for="title">Book title:</label>
+  <input type="text" id="title" name="title" /><br />
+
+  <label for="author">Author (separate by commas if multiple):</label>
+  <input type="text" id="author" name="author" /><br />
+
+  <label for="description">Description:</label><br />
+  <textarea
+    id="description"
+    name="description"
+    rows="6"
+    cols="60"
+  >Description</textarea><br />
+
+  <label for="genre">Genre (separate by commas if multiple):</label>
+  <input type="text" id="genre" name="genre" /><br />
+
+  <label for="isbn13">ISBN-13:</label>
+  <input type="text" id="isbn13" name="isbn13" /><br />
+
+  <label for="isbn10">ISBN-10:</label>
+  <input type="text" id="isbn10" name="isbn10" /><br />
+
+  <label for="releaseYear">Release Year:</label>
+  <input type="text" id="releaseYear" name="releaseYear" /><br />
+  <input type="hidden" id="id" name="id" value="{{data.id}}" />
+  <input type="submit" />
+
+</form>
