@@ -11,8 +11,12 @@
           {{#unless @last}}, {{/unless}}
         {{/each}}
       </td>
-      <td><a href="">Add to read list</a></td>
-      <td><a href="">Add to to-be-read list</a></td>
+      <td><a href="/books/read-list/{{this.id}}">Add to
+          <strong>read</strong>
+          list</a></td>
+      <td><a href="/books/want-to-read-list/{{this.id}}">Add to
+          <strong>want-be-read</strong>
+          list</a></td>
     </tr>
   {{/each}}
 </table>

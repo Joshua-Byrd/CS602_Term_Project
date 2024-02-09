@@ -10,10 +10,10 @@
           {{#unless @last}}, {{/unless}}
         {{/each}}
       </td>
-      <td><a href="">edit</a></td>
-      <td><a href="">delete</a></td>
+      <td><a href="/books/edit/{{this.id}}">edit</a></td>
+      <td><a href="/books/delete/{{this.id}}">delete</a></td>
     </tr>
   {{/each}}
 </table>
 
-<a href="#">Add New Book</a>
+<a href="/books/add">Add New Book</a>
