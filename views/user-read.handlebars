@@ -1,8 +1,9 @@
-<h3>Book List</h3>
+<h3>Read List</h3>
 <table class="table">
   <th>Title</th><th>Author(s)</th><th></th><th></th>
   {{#each results}}
     <tr>
+      <!--Title will take you to the book page-->
       <td><a href="/book-admin/{{this.id}}">{{this.title}}</a></td>
       <td>
         {{#each this.author}}
@@ -10,11 +11,8 @@
           {{#unless @last}}, {{/unless}}
         {{/each}}
       </td>
-      <td><a href="/books/edit/{{this.id}}">edit</a></td>
-      <td><a href="/books/delete/{{this.id}}">delete</a></td>
+      <td><a href="/books/remove-read-list/{{this.id}}">Remove</a></td>
     </tr>
   {{/each}}
 </table>
-
-<a href="/books/add">Add New Book</a>
-<p><a href="/admin">Go home</a></p>
+<a href="/user">Go home</a>
