@@ -1,0 +1,27 @@
+{{#if results}}
+  <table class="table">
+    <th>Title</th><th>Author(s)</th><th></th><th></th>
+    {{#each results}}
+      <tr>
+        <!--Title will take you to the book page-->
+        <td><a href="/book-admin/{{this.id}}">{{this.title}}</a></td>
+        <td>
+          {{#each this.author}}
+            {{this}}
+            {{#unless @last}}, {{/unless}}
+          {{/each}}
+        </td>
+        <td><a href="/books/read-list/{{this.id}}">Add to
+            <strong>read</strong>
+            list</a></td>
+        <td><a href="/books/want-to-read-list/{{this.id}}">Add to
+            <strong>want-be-read</strong>
+            list</a></td>
+      </tr>
+    {{/each}}
+  </table>
+{{else}}
+  <h4>Nothing Found!</h4>
+{{/if}}
+
+<a href="/user/search">Go back to search</a>
