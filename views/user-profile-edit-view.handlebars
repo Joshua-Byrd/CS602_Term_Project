@@ -1,0 +1,28 @@
+<form method="post" action="/user/profile/edit" class="form-group">
+
+  <p><label for="firstName">First Name:</label>
+    <input
+      type="text"
+      id="firstName"
+      name="firstName"
+      value="{{data.firstName}}"
+    /></p>
+
+  <p><label for="lastName">Last Name:</label>
+    <input
+      type="text"
+      id="lastName"
+      name="lastName"
+      value="{{data.lastName}}"
+    /></p>
+
+  <p><label for="email">Email:</label>
+    <input type="text" id="email" name="email" value="{{data.email}}" /></p>
+
+  <p><label for="bio">Bio:</label>
+    <input type="text" id="bio" name="bio" value="{{data.bio}}" /></p>
+
+  <input type="hidden" id="id" name="id" value="{{data.id}}" />
+  <input type="submit" />
+</form>
+<a href="/user">Go back</a>
