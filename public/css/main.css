@@ -16,3 +16,9 @@ ul {
     margin-right: auto;
     text-align: center;
 }
+
+.remove-button {
+    text-decoration: none;
+    background-color: none;
+    border: none;
+}
