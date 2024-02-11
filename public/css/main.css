@@ -17,8 +17,11 @@ ul {
     text-align: center;
 }
 
-.remove-button {
-    text-decoration: none;
-    background-color: none;
-    border: none;
+table tr td form.remove-button {
+    margin: 0;
+    padding: 0;
+    border: none !important;
+    background: none !important;
+    text-decoration: none !important;
+    color: inherit;
 }
