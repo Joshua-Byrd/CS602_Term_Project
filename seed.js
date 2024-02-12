@@ -260,6 +260,7 @@ async function seed() {
     {
       firstName: "Jane",
       lastName: "Doe",
+      admin: true,
       email: "iamtheadmin@newapp.com",
       read: ["The Time Machine", "The Great Gatsby"],
       toBeRead: ["The Three Body Problem", "1984"],

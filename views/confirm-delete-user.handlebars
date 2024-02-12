@@ -1,0 +1,8 @@
+<h3>Are you sure you want to delete the user,
+  {{data.firstName}}
+  {{data.lastName}}?</h3>
+<form method="post" action="/admin/user/delete">
+  <input type="hidden" id="id" name="id" value="{{data.id}}" />
+  <input type="submit" id="delete" name="delete" value="Delete" />
+</form>
+<p><a href="/admin/users">Go back</a></p>
