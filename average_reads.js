@@ -23,6 +23,7 @@ app.use(express.static(__dirname + "/public"));
 //set up routing
 app.use("/", routes);
 
+//start server
 app.listen(3000, () => {
   console.log("Server listening on port 3000");
 });
