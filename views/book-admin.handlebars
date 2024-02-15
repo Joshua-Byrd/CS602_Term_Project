@@ -1,25 +1,29 @@
 <h3>{{title}}</h3>
-Authors:
-{{#each data.author}}
-  {{this}}
-  {{#unless @last}}, {{/unless}}
-{{/each}}<br />
+<section class="book">
+  <b>Author(s)</b>
+  {{#each data.author}}
+    {{this}}
+    {{#unless @last}}, {{/unless}}
+  {{/each}}<br />
 
-Description:
-{{data.description}}<br />
-Genre:
-{{#each data.genre}}
-  {{this}}
-  {{#unless @last}}, {{/unless}}
-{{/each}}<br />
-ISBN12:
-{{data.isbn13}}<br />
-ISBN10:
-{{data.isbn10}}<br />
-Year:
-{{data.releaseYear}}<br />
-Average Rating:
-{{data.avgRating}}<br />
-<a href="/books/edit/{{data.id}}">Edit Book</a>
-<p><a href="/books/delete/{{data.id}}">Delete Book</a></p>
-<p><a href="/admin">Go home</a></p>
+  <b>Description</b>
+  {{data.description}}<br />
+  <b>Genre(s)</b>
+  {{#each data.genre}}
+    {{this}}
+    {{#unless @last}}, {{/unless}}
+  {{/each}}<br />
+  <b>ISBN12</b>
+  {{data.isbn13}}<br />
+  <b>ISBN10</b>
+  {{data.isbn10}}<br />
+  <b>Year Released</b>
+  {{data.releaseYear}}<br />
+  <b>Average Rating</b>
+  {{data.avgRating}}<br />
+</section>
+<nav class="bottom-nav">
+  <a href="/books/edit/{{data.id}}">Edit Book</a>
+  <a href="/books/delete/{{data.id}}">Delete Book</a>
+  <a href="/admin">Go home</a>
+</nav>

@@ -2,10 +2,10 @@
 <form method="post" action="/books/add" class="form">
 
   <label for="title">Book title:</label>
-  <input type="text" id="title" name="title" /><br />
+  <p><input type="text" id="title" name="title" /></p>
 
   <label for="author">Author (separate by commas if multiple):</label>
-  <input type="text" id="author" name="author" /><br />
+  <p><input type="text" id="author" name="author" /><br /></p>
 
   <label for="description">Description:</label><br />
   <textarea
@@ -13,22 +13,24 @@
     name="description"
     rows="6"
     cols="60"
-  >Description</textarea><br />
+  ></textarea><br />
 
   <label for="genre">Genre (separate by commas if multiple):</label>
-  <input type="text" id="genre" name="genre" /><br />
+  <p><input type="text" id="genre" name="genre" /><br /></p>
 
   <label for="isbn13">ISBN-13:</label>
-  <input type="text" id="isbn13" name="isbn13" /><br />
+  <p><input type="text" id="isbn13" name="isbn13" /><br /></p>
 
   <label for="isbn10">ISBN-10:</label>
-  <input type="text" id="isbn10" name="isbn10" /><br />
+  <p><input type="text" id="isbn10" name="isbn10" /><br /></p>
 
   <label for="releaseYear">Release Year:</label>
-  <input type="text" id="releaseYear" name="releaseYear" /><br />
+  <p><input type="text" id="releaseYear" name="releaseYear" /><br /></p>
   <input type="hidden" id="id" name="id" value="{{data.id}}" />
   <input type="submit" id="addBook" name="addBook" value="Add Book" />
 
 </form>
-<a href="/books-admin">Go back</a>
-<p><a href="/admin">Go home</a></p>
+<nav class="bottom-nav">
+  <a href="/books-admin">Go back</a>
+  <a href="/admin">Go home</a>
+</nav>

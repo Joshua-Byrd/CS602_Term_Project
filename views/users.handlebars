@@ -1,19 +1,24 @@
 <h3>Users</h3>
-<table class="table">
-  <th>First Name</th><th>lastName</th><th>Email</th><th>Admin</th>
-  {{#each results}}
-    <tr>
-      <td>{{this.firstName}}</td>
-      <td>
-        {{this.lastName}}
-      </td>
-      <td>{{this.email}}</td>
-      <td>{{this.admin}}</td>
-      <td><a href="/admin/user/edit/{{this.id}}">Edit</a></td>
-      <td><a href="/admin/user/delete/{{this.id}}">Delete</a></td>
-    </tr>
-  {{/each}}
-</table>
-
-<a href="/admin/user/add">Add New User</a>
-<p><a href="/admin">Go home</a></p>
+{{#if results}}
+  <table class="table">
+    <th>First Name</th><th>lastName</th><th>Email</th><th>Admin</th>
+    {{#each results}}
+      <tr>
+        <td>{{this.firstName}}</td>
+        <td>
+          {{this.lastName}}
+        </td>
+        <td>{{this.email}}</td>
+        <td>{{this.admin}}</td>
+        <td><a href="/admin/user/edit/{{this.id}}">Edit</a></td>
+        <td><a href="/admin/user/delete/{{this.id}}">Delete</a></td>
+      </tr>
+    {{/each}}
+  </table>
+{{else}}
+  <h4>Nothing Found!</h4>
+{{/if}}
+<nav class="bottom-nav">
+  <a href="/admin/user/add">Add New User</a>
+  <a href="/admin">Go home</a>
+</nav>

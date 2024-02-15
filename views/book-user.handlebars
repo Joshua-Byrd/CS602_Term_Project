@@ -1,25 +1,29 @@
 <h3>{{title}}</h3>
-Authors:
-{{#each data.author}}
-  {{this}}
-  {{#unless @last}}, {{/unless}}
-{{/each}}<br />
+<section class="book">
+  <b>Author(s)</b>
+  {{#each data.author}}
+    {{this}}
+    {{#unless @last}}, {{/unless}}
+  {{/each}}<br />
 
-Description:
-{{data.description}}<br />
-Genre:
-{{#each data.genre}}
-  {{this}}
-  {{#unless @last}}, {{/unless}}
-{{/each}}<br />
-ISBN12:
-{{data.isbn13}}<br />
-ISBN10:
-{{data.isbn10}}<br />
-Year:
-{{data.releaseYear}}<br />
-Average Rating:
-{{data.avgRating}}<br />
-<a href="/books/read-list/{{data.id}}">Add to "read" list.</a>
-<p><a href="/books/want-to-read-list/{{data.id}}">Add to "Want to read" list</a></p>
-<p><a href="/user">Go home</a></p>
+  <b>Description</b>
+  {{data.description}}<br />
+  <b>Genre(s)</b>
+  {{#each data.genre}}
+    {{this}}
+    {{#unless @last}}, {{/unless}}
+  {{/each}}<br />
+  <b>ISBN13</b>
+  {{data.isbn13}}<br />
+  <b>ISBN10</b>
+  {{data.isbn10}}<br />
+  <b>Year Released</b>
+  {{data.releaseYear}}<br />
+  <b>Average Rating</b>
+  {{data.avgRating}}<br />
+</section>
+<nav class="bottom-nav">
+  <a href="/books/read-list/{{data.id}}">Add to "read" list.</a>
+  <a href="/books/want-to-read-list/{{data.id}}">Add to "Want to read" list</a>
+  <a href="/user">Go home</a>
+</nav>
