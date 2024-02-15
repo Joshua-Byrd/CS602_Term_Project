@@ -46,4 +46,53 @@ app.listen(3000, () => {
 
 ## Directory Structure
 
+The main directory contains only the main JavaScript file, `average_reads.js`, the `package.json` file, this README, and the `seed.js`. Subdirectories contain all other files in the following format:
+
+- /public - all static files
+- /public/css - all CSS files
+- /public/img - all image files
+- /views - all views to be rendered
+- /views/layouts - contains the main layout file
+- /lib - contains various files and directories used in the the execution of the server
+- /lib/routing - all JavaScript route files as well as `routeIndex.js` which is required by the main file
+
+Some additional notes: `dbConnection.js` exports a connection to the database and the models used to access the book and user collections. `util.js` contains helper functions that are used in the processing of data retrieved from the database. The node_modules directory is **not** contained in this repository but will be created when `npm install` is ran during setup.
+
 ## Routes
+
+| Route                           | HTTP | Function                                                        |
+| ------------------------------- | ---- | --------------------------------------------------------------- |
+| /                               | GET  | Render the splash page view                                     |
+| /user                           | GET  | Render the user's home page view                                |
+| /admin                          | GET  | Render the admin's home page view                               |
+| /user/search                    | GET  | Render the user's book search view                              |
+| /user/search/query              | GET  | Render the result of the user's book search                     |
+| /books-user                     | GET  | Render the view for all books with user functionality           |
+| /book-user/:id                  | GET  | Render the view for the specified book with user functionality  |
+| /admin/search                   | GET  | Render the admin's book search view                             |
+| /admin/search/query             | GET  | Render the result of the admin's book search                    |
+| /admin/search-user              | GET  | Render the admin's user search view                             |
+| /admin/search-user/query        | GET  | Render the results of the user search                           |
+| /books-admin                    | GET  | Render the view for all books with admin functionality          |
+| /book-admin/:id                 | GET  | Render the view for the specified book with admin functionality |
+| /books/add                      | GET  | Render form to add a book                                       |
+| /books/add                      | POST | Add book to the database                                        |
+| /books/edit/:id                 | GET  | Render form to edit existing book                               |
+| /books/edit                     | POST | Update existing book in the database                            |
+| /books/delete/:id               | GET  | Render the confirmation page to delete the specified book       |
+| /books/delete                   | POST | Delete book from the database                                   |
+| /books/read-list/:id            | GET  | Add book to user's _read_ list                                  |
+| /books/want-to-read-list/:id    | GET  | Add book to user's _want-to-read_ list                          |
+| /books/remove-read-list         | POST | Remove book from user's _read_ list                             |
+| /books/remove-want-to-read-list | POST | Remove book from user's _want-to-read_ list                     |
+| /books/read-list                | GET  | Render user's _read_ list view                                  |
+| /books/want-to-read-list        | GET  | Render user's _want-to-read_ list view                          |
+| /user/profile                   | GET  | Render user's profile view                                      |
+| /user/profile/edit              | GET  | Render view to edit user's profile                              |
+| /admin/users                    | GET  | Render all users for admins                                     |
+| /admin/users/edit/:id           | GET  | Render form to edit the specified user                          |
+| /admin/user/edit/               | POST | Udate user in the database                                      |
+| /admin/users/delete/:id         | GET  | Render confirmation page to delete the specified user           |
+| /admin/user/delete              | POST | delete user from the database                                   |
+| /admin/user/add                 | GET  | Render view to add user                                         |
+| /admin/user/add                 | POST | Add new user to database                                        |
