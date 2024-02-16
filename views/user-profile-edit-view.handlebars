@@ -1,3 +1,5 @@
+{{>user-nav}}
+<section class="main">
 <form method="post" action="/user/profile/edit" class="form-group">
 
   <p><label for="firstName">First Name:</label>
@@ -25,6 +27,4 @@
   <input type="hidden" id="id" name="id" value="{{data.id}}" />
   <input type="submit" />
 </form>
-<nav class="bottom-nav">
-  <a href="/user">Go back</a>
-</nav>
+</section>

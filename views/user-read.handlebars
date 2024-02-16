@@ -1,29 +1,29 @@
-<h3>Read List</h3>
-<table class="table">
-  <th>Title</th><th>Author(s)</th><th></th><th></th>
-  {{#each results}}
-    <tr>
-      <!--Title will take you to the book page-->
-      <td><a href="/book-admin/{{this.id}}">{{this.title}}</a></td>
-      <td>
-        {{#each this.author}}
-          {{this}}
-          {{#unless @last}}, {{/unless}}
-        {{/each}}
-      </td>
-      <td>
-        <form
-          action="/books/remove-read-list"
-          method="post"
-          class="remove-button"
-        >
-          <input type="hidden" id="id" name="id" value="{{this.id}}" />
-          <input type="submit" id="remove" name="remove" value="Remove" />
-        </form>
-      </td>
-    </tr>
-  {{/each}}
-</table>
-<nav class="bottom-nav">
-  <a href="/user">Go home</a>
-</nav>
+{{> user-nav}}
+<section class="main">
+  <h3>Read List</h3>
+  <table class="table">
+    <th>Title</th><th>Author(s)</th><th></th>
+    {{#each results}}
+      <tr>
+        <!--Title will take you to the book page-->
+        <td><a href="/book-admin/{{this.id}}">{{this.title}}</a></td>
+        <td>
+          {{#each this.author}}
+            {{this}}
+            {{#unless @last}}, {{/unless}}
+          {{/each}}
+        </td>
+        <td>
+          <form
+            action="/books/remove-read-list"
+            method="post"
+            class="remove-button"
+          >
+            <input type="hidden" id="id" name="id" value="{{this.id}}" />
+            <input type="submit" id="remove" name="remove" value="Remove" />
+          </form>
+        </td>
+      </tr>
+    {{/each}}
+  </table>
+</section>

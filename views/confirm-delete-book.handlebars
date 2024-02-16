@@ -1,3 +1,5 @@
+{{>admin-nav}}
+<section class="main">
 <h3>Are you sure you want to delete {{data.title}}?</h3>
 <form method="post" action="/books/delete">
   <input type="hidden" id="id" name="id" value="{{data.id}}" />
@@ -6,3 +8,4 @@
 <nav class="bottom-nav">
   <a href="/books-admin">Go back</a>
 </nav>
+</section>

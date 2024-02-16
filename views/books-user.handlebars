@@ -1,29 +1,29 @@
-<h3>Book List</h3>
-{{#if results}}
-  <table class="table">
-    <th>Title</th><th>Author(s)</th><th></th><th></th>
-    {{#each results}}
-      <tr>
-        <!--Title will take you to the book page-->
-        <td><a href="/book-user/{{this.id}}">{{this.title}}</a></td>
-        <td>
-          {{#each this.author}}
-            {{this}}
-            {{#unless @last}}, {{/unless}}
-          {{/each}}
-        </td>
-        <td><a href="/books/read-list/{{this.id}}">Add to
-            <strong>read</strong>
-            list</a></td>
-        <td><a href="/books/want-to-read-list/{{this.id}}">Add to
-            <strong>want-be-read</strong>
-            list</a></td>
-      </tr>
-    {{/each}}
-  </table>
-{{else}}
-  <h4>Nothing found!</h4>
-{{/if}}
-<nav class="bottom-nav">
-  <a href="/user">Go home</a>
-</nav>
+{{>user-nav}}
+<section class="main">
+  <h3>Book List</h3>
+  {{#if results}}
+    <table class="table">
+      <th>Title</th><th>Author(s)</th><th></th><th></th>
+      {{#each results}}
+        <tr>
+          <!--Title will take you to the book page-->
+          <td><a href="/book-user/{{this.id}}">{{this.title}}</a></td>
+          <td>
+            {{#each this.author}}
+              {{this}}
+              {{#unless @last}}, {{/unless}}
+            {{/each}}
+          </td>
+          <td><a href="/books/read-list/{{this.id}}">Add to
+              <strong>read</strong>
+              list</a></td>
+          <td><a href="/books/want-to-read-list/{{this.id}}">Add to
+              <strong>want-be-read</strong>
+              list</a></td>
+        </tr>
+      {{/each}}
+    </table>
+  {{else}}
+    <h4>Nothing found!</h4>
+  {{/if}}
+</section>

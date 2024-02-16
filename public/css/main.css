@@ -1,21 +1,62 @@
-* {
-    color: blueviolet;
+body {
+    position: relative;
+    background-image: url(/img/ed-robertson-eeSdJfLfx1A-unsplash.jpg);
+    color: #fff;
+}
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/img/ed-robertson-eeSdJfLfx1A-unsplash.jpg);
+    z-index: -1;
+}
+
+header {
+    height: 20vh;
+    color: bisque;
+    padding: 15px;
+    /* margin-bottom: 25px; */
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 25px;
+    font-size: 4rem;
 }
 
 ul {
     list-style-type: none;
 }
 
-#main {
-    width: 70%;
+#main-layout {
+    display: flex;
+    min-height: 60vh;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    color: burlywood;
+    text-align: center;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
-    /* text-align: center; */
+    justify-content: space-between;
+    /* padding-left: 0px; */
+
+}
+
+.main {
+    width: 66%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 25px;
+}
+
+#main h2 {
+    margin-bottom: 25px;
 }
 
 .bottom-nav {
@@ -32,4 +73,32 @@ ul {
 .book {
     display: flex;
     flex-direction: column;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 33%;
+    position: relative;
+    height: 100%;
+    left: 0;
+    top: 0;
+    text-align: left;
+    padding-left: 0px;
+    padding-top: 25px;
+    margin-left: 0px;
+}
+
+.navigation ul li {
+    line-height: 2rem;
+}
+
+#main-splash {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }

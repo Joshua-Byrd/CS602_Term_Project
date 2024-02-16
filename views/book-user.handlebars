@@ -1,5 +1,7 @@
-<h3>{{title}}</h3>
-<section class="book">
+{{>user-nav}}
+  
+<div class="book">
+  <h3>{{title}}</h3>
   <b>Author(s)</b>
   {{#each data.author}}
     {{this}}
@@ -21,9 +23,8 @@
   {{data.releaseYear}}<br />
   <b>Average Rating</b>
   {{data.avgRating}}<br />
-</section>
 <nav class="bottom-nav">
   <a href="/books/read-list/{{data.id}}">Add to "read" list.</a>
   <a href="/books/want-to-read-list/{{data.id}}">Add to "Want to read" list</a>
-  <a href="/user">Go home</a>
 </nav>
+</div>

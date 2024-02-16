@@ -1,5 +1,6 @@
-<h3>{{title}}</h3>
+{{>admin-nav}}
 <section class="book">
+  <h3>{{title}}</h3>
   <b>Author(s)</b>
   {{#each data.author}}
     {{this}}
@@ -21,9 +22,9 @@
   {{data.releaseYear}}<br />
   <b>Average Rating</b>
   {{data.avgRating}}<br />
-</section>
-<nav class="bottom-nav">
+  <nav class="bottom-nav">
   <a href="/books/edit/{{data.id}}">Edit Book</a>
   <a href="/books/delete/{{data.id}}">Delete Book</a>
-  <a href="/admin">Go home</a>
+
 </nav>
+</section>

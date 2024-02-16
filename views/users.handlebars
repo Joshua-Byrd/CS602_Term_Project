@@ -1,7 +1,9 @@
+{{>admin-nav}}
+<section class="main">
 <h3>Users</h3>
 {{#if results}}
   <table class="table">
-    <th>First Name</th><th>lastName</th><th>Email</th><th>Admin</th>
+    <th>First Name</th><th>lastName</th><th>Email</th><th>Admin</th><th></th><th></th>
     {{#each results}}
       <tr>
         <td>{{this.firstName}}</td>
@@ -20,5 +22,5 @@
 {{/if}}
 <nav class="bottom-nav">
   <a href="/admin/user/add">Add New User</a>
-  <a href="/admin">Go home</a>
 </nav>
+</section>
