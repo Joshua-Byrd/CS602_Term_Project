@@ -2,37 +2,37 @@
 <section class="main">
 <form method="post" action="/books/edit" class="form-group">
 
-  <label for="title">Title:</label>
-  <p><input type="text" id="title" name="title" value="{{data.title}}" /></p>
+  <label for="title">Title</label><br>
+  <input type="text" id="title" name="title" value="{{data.title}}" /><br>
 
-  <label for="author">Author:</label>
-  <p><input type="text" id="author" name="author" value="{{data.author}}" /></p>
+  <label for="author">Author</label><br>
+  <input type="text" id="author" name="author" value="{{data.author}}" /><br>
 
-  <label for="description">Description:</label>
-  <p><textarea
+  <label for="description">Description</label><br>
+  <textarea
       id="description"
       name="description"
       rows="6"
       cols="60"
-    >{{data.description}}</textarea><br /></p>
+    >{{data.description}}</textarea><br />
 
-  <label for="genre">Genre:</label>
-  <p><input type="text" id="genre" name="genre" value="{{data.genre}}" /></p>
+  <label for="genre">Genre</label><br>
+  <input type="text" id="genre" name="genre" value="{{data.genre}}" /><br>
 
-  <label for="isbn13">ISBN-13:</label>
-  <p><input type="text" id="isbn13" name="isbn13" value="{{data.isbn13}}" /></p>
+  <label for="isbn13">ISBN-13</label><br>
+  <input type="text" id="isbn13" name="isbn13" value="{{data.isbn13}}" /><br>
 
-  <label for="isbn10">ISBN-10:</label>
-  <p><input type="text" id="isbn10" name="isbn10" value="{{data.isbn10}}" /></p>
+  <label for="isbn10">ISBN-10</label><br>
+  <input type="text" id="isbn10" name="isbn10" value="{{data.isbn10}}" /><br>
 
-  <label for="releaseYear">Release Year:</label>
-  <p><input
+  <label for="releaseYear">Release Year</label><br>
+  <input
       type="text"
       id="releaseYear"
       name="releaseYear"
       value="{{data.releaseYear}}"
-    /></p>
-  <input type="hidden" id="id" name="id" value="{{data.id}}" />
+    /><br>
+  <input type="hidden" id="id" name="id" value="{{data.id}}" /><br>
   <input type="submit" />
 </form>
 <nav class="bottom-nav">

@@ -2,29 +2,29 @@
 <section class="main">
 <form method="post" action="/user/profile/edit" class="form-group">
 
-  <p><label for="firstName">First Name:</label>
+  <label for="firstName">First Name</label><br>
     <input
       type="text"
       id="firstName"
       name="firstName"
       value="{{data.firstName}}"
-    /></p>
+    /><br>
 
-  <p><label for="lastName">Last Name:</label>
+  <label for="lastName">Last Name</label><br>
     <input
       type="text"
       id="lastName"
       name="lastName"
       value="{{data.lastName}}"
-    /></p>
+    /><br>
 
-  <p><label for="email">Email:</label>
-    <input type="text" id="email" name="email" value="{{data.email}}" /></p>
+  <label for="email">Email</label><br>
+    <input type="text" id="email" name="email" value="{{data.email}}" /><br>
 
-  <p><label for="bio">Bio:</label>
-    <input type="text" id="bio" name="bio" value="{{data.bio}}" /></p>
+  <label for="bio">Bio</label><br>
+    <input type="text" id="bio" name="bio" value="{{data.bio}}" /><br>
 
-  <input type="hidden" id="id" name="id" value="{{data.id}}" />
+  <input type="hidden" id="id" name="id" value="{{data.id}}" /><br>
   <input type="submit" />
 </form>
 </section>

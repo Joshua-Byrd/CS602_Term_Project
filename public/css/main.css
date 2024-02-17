@@ -102,3 +102,8 @@ ul {
     flex-direction: column;
     justify-content: space-around;
 }
+
+.user-info,
+.form-group {
+    text-align: left;
+}
