@@ -96,3 +96,39 @@ Some additional notes: `dbConnection.js` exports a connection to the database an
 | /admin/user/delete              | POST | delete user from the database                                   |
 | /admin/user/add                 | GET  | Render view to add user                                         |
 | /admin/user/add                 | POST | Add new user to database                                        |
+
+# XML and JSON
+
+Endpoints are provided for both XML and JSON format to either retrieve all books in the database or to retrieve a list of books based on title, author, or ISBN. For testing purposes, you can use the following commands (or substitute any valid title, author, or ISBN in the query string):
+
+## Get all books in JSON format
+
+```
+curl -H "Accept:application/json" http://localhost:3000/books-user;echo
+```
+
+## Get all books in XML format
+
+```
+curl -H "Accept:application/xml" http://localhost:3000/books-user
+```
+
+## Get individual books in JSON by title, author, or ISBN
+
+```
+curl -H "Accept:application/json" http://localhost:3000/user/search/query?bookTitle=1984;echo
+
+curl -H "Accept:application/json" http://localhost:3000/user/search/query?bookAuthor=Chuck+Palahniuk;echo
+
+curl -H "Accept:application/json" http://localhost:3000/user/search/query?bookISBN=978-0866118705;echo
+```
+
+## Get individual books in XML by title, author, or ISBN
+
+```
+curl -H "Accept:application/xml" http://localhost:3000/user/search/query?bookTitle=1984
+
+curl -H "Accept:application/xml" http://localhost:3000/user/search/query?bookAuthor=Chuck+Palahniuk
+
+curl -H "Accept:application/xml" http://localhost:3000/user/search/query?bookISBN=978-0866118705
+```
