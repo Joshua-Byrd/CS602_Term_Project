@@ -52,6 +52,7 @@ The main directory contains only the main JavaScript file, `average_reads.js`, t
 - /public/css - all CSS files
 - /public/img - all image files
 - /views - all views to be rendered
+- /views/partials - partial views for navbar
 - /views/layouts - contains the main layout file
 - /lib - contains various files and directories used in the the execution of the server
 - /lib/routing - all JavaScript route files as well as `routeIndex.js` which is required by the main file
@@ -81,8 +82,8 @@ Some additional notes: `dbConnection.js` exports a connection to the database an
 | /books/edit                     | POST | Update existing book in the database                            |
 | /books/delete/:id               | GET  | Render the confirmation page to delete the specified book       |
 | /books/delete                   | POST | Delete book from the database                                   |
-| /books/read-list/:id            | GET  | Add book to user's _read_ list                                  |
-| /books/want-to-read-list/:id    | GET  | Add book to user's _want-to-read_ list                          |
+| /books/read-list                | POST | Add book to user's _read_ list                                  |
+| /books/want-to-read-list        | POST | Add book to user's _want-to-read_ list                          |
 | /books/remove-read-list         | POST | Remove book from user's _read_ list                             |
 | /books/remove-want-to-read-list | POST | Remove book from user's _want-to-read_ list                     |
 | /books/read-list                | GET  | Render user's _read_ list view                                  |
