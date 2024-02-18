@@ -24,7 +24,16 @@
   <b>Average Rating</b>
   {{data.avgRating}}<br />
 <nav class="bottom-nav">
-  <a href="/books/read-list/{{data.id}}">Add to "read" list.</a>
-  <a href="/books/want-to-read-list/{{data.id}}">Add to "Want to read" list</a>
+  <form action="/books/read-list" method="post">
+    <input type="hidden" id="id" name="id" value="{{data.id}}">
+    <input type="submit" value="Read">
+  </form>
+
+  <form action="/books/want-to-read-list" method="post">
+    <input type="hidden" id="id" name="id" value="{{data.id}}">
+    <input type="submit" value="Want to Read">
+  </form>
+  {{!-- <a href="/books/read-list/{{data.id}}">Add to "read" list.</a> --}}
+  {{!-- <a href="/books/want-to-read-list/{{data.id}}">Add to "Want to read" list</a> --}}
 </nav>
 </div>

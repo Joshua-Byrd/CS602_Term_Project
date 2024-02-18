@@ -17,12 +17,19 @@
               {{#unless @last}}, {{/unless}}
             {{/each}}
           </td>
-          <td><a href="/books/read-list/{{this.id}}">Add to
-              <strong>read</strong>
-              list</a></td>
-          <td><a href="/books/want-to-read-list/{{this.id}}">Add to
-              <strong>want-be-read</strong>
-              list</a></td>
+          <td>
+            <form action="/books/read-list" method="post">
+            <input type="hidden" id="id" name="id" value="{{this.id}}">
+            <input type="submit" value="Read">
+          </form>
+
+          </td>
+          <td>
+            <form action="/books/want-to-read-list" method="post">
+            <input type="hidden" id="id" name="id" value="{{this.id}}">
+            <input type="submit" value="Want to Read">
+          </form>
+          </td>
         </tr>
       {{/each}}
       </tbody>

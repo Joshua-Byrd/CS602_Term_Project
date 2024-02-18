@@ -1,13 +1,13 @@
 {{>admin-nav}}
 <section class="main">
 <h3>Add new Book</h3>
-<form method="post" action="/books/add" class="form">
+<form method="post" action="/books/add" class="form-group">
 
-  <label for="title">Book title:</label>
-  <p><input type="text" id="title" name="title" /></p>
+  <label for="title">Book title:</label><br>
+  <input type="text" id="title" name="title" /><br>
 
-  <label for="author">Author (separate by commas if multiple):</label>
-  <p><input type="text" id="author" name="author" /><br /></p>
+  <label for="author">Author (separate by commas if multiple):</label><br>
+  <input type="text" id="author" name="author" /><br />
 
   <label for="description">Description:</label><br />
   <textarea
@@ -17,18 +17,18 @@
     cols="60"
   ></textarea><br />
 
-  <label for="genre">Genre (separate by commas if multiple):</label>
-  <p><input type="text" id="genre" name="genre" /><br /></p>
+  <label for="genre">Genre (separate by commas if multiple):</label><br>
+  <input type="text" id="genre" name="genre" /><br />
 
-  <label for="isbn13">ISBN-13:</label>
-  <p><input type="text" id="isbn13" name="isbn13" /><br /></p>
+  <label for="isbn13">ISBN-13:</label><br>
+  <input type="text" id="isbn13" name="isbn13" /><br />
 
-  <label for="isbn10">ISBN-10:</label>
-  <p><input type="text" id="isbn10" name="isbn10" /><br /></p>
+  <label for="isbn10">ISBN-10:</label><br>
+  <input type="text" id="isbn10" name="isbn10" /><br />
 
-  <label for="releaseYear">Release Year:</label>
-  <p><input type="text" id="releaseYear" name="releaseYear" /><br /></p>
-  <input type="hidden" id="id" name="id" value="{{data.id}}" />
+  <label for="releaseYear">Release Year:</label><br>
+  <input type="text" id="releaseYear" name="releaseYear" /><br />
+  <input type="hidden" id="id" name="id" value="{{data.id}}" /><br>
   <input type="submit" id="addBook" name="addBook" value="Add Book" />
 
 </form>
