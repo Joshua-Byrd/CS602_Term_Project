@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 async function seed() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/projectTestDb");
+  await mongoose.connect("mongodb://127.0.0.1:27017/cs602projectDb");
 
   //Populate book collection----------------------------------------------------
   const bookSchema = new mongoose.Schema({

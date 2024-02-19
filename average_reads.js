@@ -23,6 +23,11 @@ app.use(express.static(__dirname + "/public"));
 //set up routing
 app.use("/", routes);
 
+// 404 error handling middleware
+app.use((req, res, next) => {
+  res.status(404).render("404", { title: "Not Found" });
+});
+
 //start server
 app.listen(3000, () => {
   console.log("Server listening on port 3000");

@@ -2,7 +2,9 @@
 
 This repository contains my term project for CS602 - Server-side Web Development at Boston University's Metropolitan College. In this project, I have built a web server with the intention of recreating some of the basic functionality of GoodReads.com, the popular book logging and review website. A user can search for books (by author, title, or ISBN) and add them to their _read_ or _want-to-read_ list, and view and edit their own profile. An administrator can view and search for both users or books, as well as add, edit, or delete users or books.
 
-One things to note: No sessions or cookies are used here. Users and admins are simulated by rendering different pages for each, with different functionality. This means there is a great deal of redundancy (DRY principle violations) that wouldn't be necessary if I were actually using logins.
+One thing to note: No sessions or cookies are used here. Users and admins are simulated by rendering different pages for each, with different functionality. This means there is a great deal of redundancy (DRY principle violations) that wouldn't be necessary if I were actually using logins.
+
+**IMPORTANT: DO NOT CHANGE THE NAME OF THE USER 'JONH DOE'!** Because I'm simulating a user being logged in, all of the functions that manipulate a user in the database, work on this user specifically. And, because MongoDB assigns id's dynamically, I'm using the name to find and manipulate the user in the database. Thus, if this user's name is changed, all of the user functions will break.
 
 ## Stack
 
