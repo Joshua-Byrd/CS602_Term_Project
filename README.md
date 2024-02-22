@@ -8,7 +8,7 @@ One thing to note: No sessions or cookies are used here. Users and admins are si
 
 ## Stack
 
-This project uses Node.js and Express.js for the server architecture, and Express-handlebars is used for the template engine. It also utilizes a MongoDB database with Mongoose as ODM. Since the focus of this project is on the server-side, very little has been done on the front-end beyond the basics. However, Bootstrap has been added to make it look somewhat decent.
+This project uses Node.js and Express.js for the server architecture, and Express-handlebars for the template engine. It also utilizes a MongoDB database with Mongoose as ODM. Since the focus of this project is on the server-side, very little has been done on the front-end beyond the basics. However, Bootstrap has been added to make it look somewhat decent.
 
 ## Setup
 

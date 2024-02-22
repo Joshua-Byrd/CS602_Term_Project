@@ -3,19 +3,19 @@
 <h3>Add new user</h3>
 <form method="post" action="/admin/user/add" class="form-group">
 
-  <label for="firstName">First Name:</label>
+  <label for="firstName">First Name:</label><br>
   <input type="text" id="firstName" name="firstName" /><br />
 
-  <label for="lastName">Last Name:</label>
+  <label for="lastName">Last Name:</label><br>
   <input type="text" id="lastName" name="lastName" /><br />
 
-  <label for="email">Email:</label>
+  <label for="email">Email:</label><br>
   <input type="text" id="email" name="email" /><br />
 
-  <label for="admin">Is Admin (true or false):</label>
-  <input type="text" id="admin" name="admin" /><br />
+   <label for="admin">Admin (check if yes)</label><br>
+  <input type="checkbox" id="admin" name="admin"><br>
 
-  <label for="bio">Bio:</label>
+  <label for="bio">Bio:</label><br />
   <input type="text" id="bio" name="bio" /><br />
 
   <input type="submit" id="addUser" name="addUser" value="Add User" />

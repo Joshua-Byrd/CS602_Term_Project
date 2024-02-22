@@ -2,7 +2,7 @@
   "name": "term_project",
   "version": "1.0.0",
   "description": "Term project for CS602 At Boston University",
-  "main": "index.js",
+  "main": "average_reads.js.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
