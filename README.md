@@ -22,7 +22,7 @@ npm install
 
 to install all necessary modules.
 
-2. Make sure that MongoDB is installed and the MongoDB daemon is running in the background.
+2. Make sure that MongoDB is installed and the MongoDB service is running in the background.
 
 3. Run the seed.js file like so:
 
